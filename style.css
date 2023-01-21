@@ -1,8 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&family=Lexend+Deca&display=swap");
 
-/* font-family: 'Inter', sans-serif;
-font-family: 'Lexend Deca', sans-serif; */
-
 :root {
   --Very-dark-blue: hsl(233, 47%, 7%); /*(main background) */
   --Dark-desaturated-blue: hsl(244, 38%, 16%); /* (card background) */
@@ -10,7 +7,6 @@ font-family: 'Lexend Deca', sans-serif; */
   --White: hsl(0, 0%, 100%); /* (main heading, stats) */
   --Slightly-transparent-white: hsla(0, 0%, 100%, 0.75); /* (main paragraph) */
   --Slightly-transparent-white: hsla(0, 0%, 100%, 0.6); /* (stat headings) */
-  --alpha: 0.8;
 }
 
 *,
@@ -55,7 +51,11 @@ p,
   color: var(--Slightly-transparent-white);
 }
 
-h1,
+h1 {
+  font-family: "Inter", sans-serif;
+  padding-bottom: 30px;
+}
+
 p,
 .data {
   font-family: "Lexend Deca", sans-serif;
@@ -65,7 +65,7 @@ p,
   font-family: "Inter", sans-serif;
   font-weight: 700;
   font-size: 1.5em;
-  letter-spacing: .9px;
+  letter-spacing: 0.9px;
 }
 
 #content {
@@ -104,11 +104,9 @@ img {
   white-space: pre;
 }
 
-h1 {
-  padding-bottom: 30px;
-}
-
 .description {
+  font-size: 0.8em;
+  line-height: 20px;
   padding-bottom: 60px;
 }
 
@@ -128,11 +126,6 @@ h1 {
   font-size: 0.7em;
 }
 
-p {
-  font-size: 0.8em;
-  line-height: 20px;
-}
-
 .overlay {
   position: absolute;
   top: 0;
@@ -141,4 +134,70 @@ p {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   width: 450px;
+}
+
+@media (max-width: 375px) {
+  #content {
+    width: 350px;
+    height: 735px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
+  h1 {
+    font-size: 1.7em;
+    padding-bottom: 20px;
+  }
+
+  .description {
+    font-size: 0.9em;
+    padding-bottom: 40px;
+  }
+
+  img {
+    width: 350px;
+    height: 260px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 0px;
+  }
+  .image {
+    float: none;
+    position: relative;
+    padding: 0px;
+  }
+  .overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: rgba(88, 19, 131, 0.596);
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 0px;
+    width: 350px;
+  }
+
+  .stats {
+    padding: 30px;
+    text-align: center;
+  }
+
+  .data {
+    display: inline-block;
+  }
+
+  .data1,
+  .data2 {
+    padding-right: 0px;
+    padding-bottom: 30px;
+  }
+
+  .new-line-mobile::after {
+    content: "\A";
+    white-space: pre;
+  }
+
+  .new-line:after {
+    white-space: normal;
+  }
 }
