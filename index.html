@@ -14,7 +14,8 @@
 
     <title>Frontend Mentor | Stats preview card component</title>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="style.css">
+
     <style>
       .attribution {
         font-size: 11px;
@@ -27,24 +28,26 @@
   </head>
   <body>
     <main>
-      <div class="image">
-        <img src="images/image-header-desktop.jpg" alt="">
+      <div id="content">
+        <div class="image">
+          <img src="images/image-header-desktop.jpg" alt="">
+        </div>
+        <div class="stats">
+          <h1>Get <span class="insights">insights</span> that help your business grow.</h1>
+        
+          <div class="description">
+            <p>Discover the benefits of data analytics and make 
+              better decisions regarding revenue, customer
+              experience, and overall efficiency.
+            </p>
+          </div>
+          <div class="data">
+            <div><span class="nums">10k+</span> COMPANIES </div>
+            <div><span class="nums">314</span> TEMPLATES </div>
+            <div><span class="nums">12m+</span> QUERIES </div>
+          </div>
+        </div>
       </div>
-
-      <h1>Get <span class="insights">insights</span> that help your business grow.</h1>
-      
-      <div>
-        <p>Discover the benefits of data analytics and make 
-          better decisions regarding revenue, customer
-          experience, and overall efficiency.
-        </p>
-      </div>
-      <div>
-        <div><span class="nums">10k+</span> companies </div>
-        <div><span class="nums">314</span> templates </div>
-        <div><span class="nums">12m+</span> queries</div>
-      </div>
-
       <div class="attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
